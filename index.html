@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> danSIG</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
+    <link rel="stylesheet" href="estilos.css">
+   
+</head>
+<body>
+<div id="map">
+    
+</div>
+<div id="div2">
+    <form>
+        <label>Nombre</label><input type="text"/><br>
+        <textarea name="" id=""cols="30" rows="10" class="Formcontrol"> Descripcion</textarea>
+        <label>Ubicacion</label><input type="text" class="Formcontrol"/><br>
+    
+    </form>
+</div>
+
+    
+</body>
+<script>
+    var map = L.map('map').setView([4.62421957 , -74.176235], 13);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+   
+}).addTo(map);
+
+var polygon = L.polygon([
+    [4.62421957, -74.178562],
+    [4.85625998, -74.194725 ],
+    [4.74528896, -74.225896]
+]).addTo(map);
+</script>
+</html>
